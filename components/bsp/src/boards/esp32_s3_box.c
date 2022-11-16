@@ -10,6 +10,7 @@
 #include "bsp_codec.h"
 #include "button.h"
 #include "bsp_btn.h"
+#include "rom/ets_sys.h"
 
 static const board_button_t g_btns[] = {
     {BOARD_BTN_ID_BOOT, 0,      GPIO_NUM_0,    0},

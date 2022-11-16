@@ -27,6 +27,7 @@
 #include "i2c_bus.h"
 #include "es7210.h"
 #include "bsp_i2c.h"
+#include "rom/ets_sys.h"
 
 #define I2S_DSP_MODE_A 0
 #define MCLK_DIV_FRE   256

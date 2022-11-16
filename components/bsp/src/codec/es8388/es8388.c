@@ -27,6 +27,7 @@
 #include "i2c_bus.h"
 #include "es8388.h"
 #include "bsp_i2c.h"
+#include "rom/ets_sys.h"
 
 static const char *ES_TAG = "ES8388_DRIVER";
 static i2c_bus_handle_t i2c_handle;

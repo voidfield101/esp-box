@@ -27,6 +27,7 @@
 #include "esp_log.h"
 #include "es8311.h"
 #include "bsp_i2c.h"
+#include "rom/ets_sys.h"
 
 /* ES8311 address
  * 0x32:CE=1;0x30:CE=0
