@@ -146,7 +146,7 @@ esp_err_t button_adc_deinit(adc1_channel_t channel, int button_index)
         /* TODO: to deinit the channel  */
         g_button.ch[ch_index].is_init = 0;
         g_button.ch[ch_index].channel = ADC1_CHANNEL_MAX;
-        ESP_LOGD(TAG, "all button is unused on channel%d, deinit the channel", g_button.ch[ch_index].channel);
+        ESP_LOGD(TAG, "all button is unused on channel%"PRIu16", deinit the channel", g_button.ch[ch_index].channel);
     }
 
     /** check channel usage on the adc*/
@@ -176,7 +176,7 @@ static uint32_t get_adc_volatge(adc1_channel_t channel)
     adc_reading /= NO_OF_SAMPLES;
     //Convert adc_reading to voltage in mV
     uint32_t voltage = adc_reading; //esp_adc_cal_raw_to_voltage(adc_reading, &g_button.adc_chars);
-    ESP_LOGV(TAG, "Raw: %d\tVoltage: %dmV", adc_reading, voltage);
+    ESP_LOGV(TAG, "Raw: %"PRIu32"\tVoltage: %"PRIu32"mV", adc_reading, voltage);
     return voltage;
 }
 
